@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PS4Brew 4.55</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body onload="runExploit()" style="margin:0;">
+  <div id="loader" class="loader"></div>
+
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+<h1 id="title"></h1>
+</div>
+<div id="content">
+<div id="contentBody">
+<br /><br /><br />
+<br /><br /><br />
+  <div id="allset" class="info" style="display:none;color:#f7cc06">
+    EXPLOIT ACTIVADO!
+  </div>
+
+  <div id="fail" class="info" style="display:none;color:#f7cc06">
+    OCURRIÓ UN ERROR :(
+  </div>
+
+  <div id="badfw" class="info" style="display:none;color:#f7cc06">
+    SOLO FIRMWARE 4.55 SOPORTADO!
+  </div>
+
+
+  <script>
+    function runExploit() {
+      setTimeout(exploit, 1500);
+    }
+
+    function allset() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("allset").style.display = "block";
+    }
+
+    function fail(info) {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("fail").style.display = "block";
+
+      alert(info)
+    }
+  </script>
+
+  <script src="rop.js"></script>
+  <script src="syscalls.js"></script>
+  <script src="payload_2.js"></script>
+  <script src="userland.js"></script>
+  <script src="kernel.js"></script>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

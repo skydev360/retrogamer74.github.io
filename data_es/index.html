@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html><head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+       <script>
+      var disableFeatures = false;
+      var ua = navigator.userAgent;
+      var playstationOrNot = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
+
+      // If the system is not a playstation, disable features, display error
+      if(playstationOrNot != "PlayStation")
+      {
+        document.write('<div class="alert alert-danger"><strong>You\'re only able to access with PS4 on Firmware 4.55</strong></div>');
+        window.stop(); //works in all browsers but IE    
+if ($.browser.msie) {document.execCommand("Stop");}; //works in IE, 
+        disableFeatures = true;
+      }
+
+      // If the system is a playstation, ensure the version is 4.55!
+      else if(ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")) != "4.55")
+      {
+        document.write('<div class="alert alert-danger"><strong>You\'re only able to access on Firmware 4.55</strong> Your current FW version is ' + ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")) + ',</div>');
+                window.stop(); //works in all browsers but IE    
+if ($.browser.msie) {document.execCommand("Stop");}; //works in IE, 
+        disableFeatures = true;
+      }
+
+      // If we've made it this far, the system must be a PS4 and must be version 4.55
+      else
+      {
+      }
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>RetroGamer Exploit Selection</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js"></script>
+<style></style></head>
+<body onhashchange="firmwareSelected()">
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+<h1 id="title"></h1>
+</div>
+<div id="content">
+<div id="contentBody">
+<div id="buttons">
+<!-- https://github.com/stooged/AppToUsb-455 -->
+<div class="tooltip">
+<a href="./loader1.html"><button class="btn btn-main">APPtoUSB v13</button></a>
+<span class="tooltiptext">Juega a tus juegos desde disco duro USB Externo ahorrando espacio en el disco interno</span>
+</div>
+<!-- https://github.com/stooged/DB_SG_Backup-455 -->
+<div class="tooltip">
+<a href="./loader2.html"><button class="btn btn-main">DB-SG Backup</button></a>
+<span class="tooltiptext">Haz backup de tus savegames, datos de usuario y los iconos launchers de juegos.</span>
+</div>
+<!-- https://github.com/xvortex/ps4-dumper-vtx -->
+<div class="tooltip">
+<a href="./loader3.html"><button class="btn btn-main">Dumper-XVortex v1.7</button></a>
+<span class="tooltiptext">Crea una copia ( Dump ) de tus juegos para poderla jugar con HEN ( Hombrew Enabler )</span>
+</div>
+<br>
+<!-- https://www.psxhax.com/threads/ps4brew-4-55-full-ps4-jailbreak-4-55-debug-settings-payload-ports.4568 -->
+<div class="tooltip">
+<a href="./loader4.html"><button class="btn btn-main">Enable Browser</button></a>
+<span class="tooltiptext">Habilita el navegador web aunque indique que necesitas conectarte a la PSN para activarlo</span>
+</div>
+<!-- https://github.com/xvortex/ps4-ftp-vtx -->
+<div class="tooltip">
+<a href="./loader5.html"><button class="btn btn-main">FTP-XVortex v1.2</button></a>
+<span class="tooltiptext">Habilita el servidor FTP. Debes permanecer en la página del navegador, si no se cierra</span>
+</div>
+<!-- https://github.com/xvortex/ps4-hen-vtx -->
+<div class="tooltip">
+<a href="./loader6.html"><button class="btn btn-main">HEN-XVortex v1.4</button></a>
+<span class="tooltiptext">Habilita Homebrew ENabler ( HEN ). Permite ejecutar backups.</span>
+</div>
+<br>
+<!-- https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN -->
+<div class="tooltip">
+<a href="./loader7.html"><button class="btn btn-main">Enable Blocker</button></a>
+<span class="tooltiptext">Activa el bloqueo para no permitir instalar actualizaciones de firmware. Modifica el directorio del disco. Sólo es necesario ejecutarlo una vez.</span>
+</div>
+<!-- https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN -->
+<div class="tooltip">
+<a href="./loader8.html"><button class="btn btn-main">Disable Blocker</button></a>
+<span class="tooltiptext">Desactiva el bloqueo que impedía instalar actualizaciones de firmware. Modifica el directorio del disco. Sólo es necesario ejecutarlo una vez.</span>
+</div>
+<!-- https://github.com/stooged/Enable_VR -->
+<div class="tooltip">
+<a href="./loader9.html"><button class="btn btn-main">VR-HEN</button></a>
+<span class="tooltiptext">Permite la ejecución de backups con soporte VR.</span>
+</div>
+<br>
+<div class="tooltip">
+<a href="./loader10.html"><button class="btn btn-main">GTA V MODMENU-1</button></a>
+<span class="tooltiptext">Arabic Guy v.1.0 - GTA V ModMenu. Hacer el menú emergente pulsado L1 + R1</span>
+</div>
+<div class="tooltip">
+<a href="./loader11.html"><button class="btn btn-main">GTA V MODMENU-2</button></a>
+<span class="tooltiptext">WildeModz v.1.1 - GTA V ModMenu. Hacer el menú emergente pulsando Izquierda + Cuadrado</span>
+</div>
+<div class="tooltip">
+<a href="./loader12.html"><button class="btn btn-main">GTA V MODMENU-3</button></a>
+<span class="tooltiptext">Lamance v.0.7 - GTA V ModMenu. Hacer el menú emergente pulsando Derecha + Cuadrado</span>
+</div>
+<br>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

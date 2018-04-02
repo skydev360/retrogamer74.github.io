@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+       <script>
+      var disableFeatures = false;
+      var ua = navigator.userAgent;
+      var playstationOrNot = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
+
+      // If the system is not a playstation, disable features, display error
+      if(playstationOrNot != "PlayStation")
+      {
+        document.write('<div class="alert alert-danger"><strong>You\'re only able to access with PS4 on Firmware 4.55</strong></div>');
+        window.stop(); //works in all browsers but IE    
+if ($.browser.msie) {document.execCommand("Stop");}; //works in IE, 
+        disableFeatures = true;
+      }
+
+      // If the system is a playstation, ensure the version is 4.55!
+      else if(ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")) != "4.55")
+      {
+        document.write('<div class="alert alert-danger"><strong>You\'re only able to access on Firmware 4.55</strong> Your current FW version is ' + ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")) + ',</div>');
+                window.stop(); //works in all browsers but IE    
+if ($.browser.msie) {document.execCommand("Stop");}; //works in IE, 
+        disableFeatures = true;
+      }
+
+      // If we've made it this far, the system must be a PS4 and must be version 4.55
+      else
+      {
+      }
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>RetroGamer Exploit Selection</title>
+<link rel="stylesheet" href="./data_es/style.css">
+<style></style></head>
+<body onhashchange="firmwareSelected()">
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+<h1 id="title"></h1>
+</div>
+<div id="content">
+<div id="contentBody">
+<div id="buttons">
+<div class="tooltip">
+<a href="./data_es/index.html"><button class="btn btn-main">Español</button></a>
+<span class="tooltiptext">Accede a este firmware en español. Recomendable hacer bookmark en la página siguiente para entrar directamente en próximas veces</span>
+</div>
+<div class="tooltip">
+<a href="./data_en/index.html"><button class="btn btn-main">English</button></a>
+<span class="tooltiptext">Use this firmware in english language. Bookmark next page to get fast direct access for future times.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
